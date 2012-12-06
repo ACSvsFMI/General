@@ -1,0 +1,20 @@
+Github Help 
+===========
+
+General - https://help.github.com/
+
+Set up GIT - https://help.github.com/articles/set-up-git
+Create a Repo - https://help.github.com/articles/create-a-repo
+
+Git flow:
+One user creates the repo, other team members has to clone it on his computer.
+$ git clone <link of repo>
+
+When you want to track something, is like picking up what objects to photograph:
+$ git add . - adds the entire directory in a waterfall manner
+/ $ git add <file_name> - add a certain file
+
+$ git commit -m "message" - after you add your changes, commit them, is like taking a picture of your objects above. You can rollback to a certain commit.
+
+$ git push - push your app on Github
+$ git pull - download the last version of the app from Github
