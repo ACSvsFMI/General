@@ -3,6 +3,11 @@ Reguli Hackathon
 ACS vs FMI
 ---------------------
 
+Fiecare student trebuie sa aiba la el - Carte de Identitate si Carnet de Student/ Legitimatie de Student,
+vizate pe anul universitar in curs de la Politehnica din Bucuresti - ACS sau de la
+Facultatea de Matematica si Informatica Bucuresti.
+!Doar studentii acestor doua facultati pot participa la eveniment.
+
 1. Fiecare echipa isi alege tema, fie din cele propuse, fie o idee proprie
   aprobata.
 
@@ -21,5 +26,4 @@ ACS vs FMI
 6. Aplicatia se va prezenta dupa ce va fi clonata ultima versiune de pe branch-ul master al repo-ului echipei.
 
 7. Nu este necesar ca aplicatia sa fie live, se poate rula local.
-
 
