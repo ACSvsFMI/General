@@ -1,6 +1,25 @@
-----------------------
 Reguli Hackathon
-
+====================
 ACS vs FMI
-
 ---------------------
+
+1. Fiecare echipa isi alege tema, fie din cele propuse, fie o idee proprie
+  aprobata.
+
+2. Tema aplicatiei trebuie sa aiba o scurta descriere(Use Cases) si un mock
+ al bazei de date si a arhitecturii acesteia.
+
+3. Echipele au 12 ore, in total, in care sa codeze aplicatia.
+
+4. Aplicatia este tinuta intr-un repo in aceasta organizatie, astfel:
+   repo name = numele echipei
+   README = numele aplicatiei si punctul 2.
+   pe branch-ul master este tinuta versiunea actualizata a aplicatiei
+
+5. Orice modificare dupa cele 12 ore nu se ia in considerare, se va realiza rollback.
+
+6. Aplicatia se va prezenta dupa ce va fi clonata ultima versiune de pe branch-ul master al repo-ului echipei.
+
+7. Nu este necesar ca aplicatia sa fie live, se poate rula local.
+
+
