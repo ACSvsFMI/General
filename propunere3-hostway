@@ -1,0 +1,10 @@
+Sunteti nou-infiintatul departament IT al unei firme de consultanta, care studiaza trend-urile pe diferite retele de socializare si le ofera clientilor informatii privind cele mai discutate lucruri. Cum Google+ este una din cele mai importante retele din acest moment, s-a decis sa se creeze o aplicatie special pentru ea, spre a fi folosita atat intern, cat si de catre clienti.
+    Task-ul vostru in aceasta zi este sa creati o aplicatie web care afiseaza activitatile unor useri de pe Google+ selectionati de catre companie ca fiind importanti, in functie de criteriile alese de catre clienti.
+    Astfel, aplicatia voastre trebuie sa contina 3 feature-uri:
+    - sa se poata adauga/sterge useri din lista de useri importanti
+    - sa existe un crawler care, in momentul in care este executat, sa preia activitatile de la userii selectionati si sa le adauge in baza de date (ATENTIE! nu se doreste sa existe duplicate in baza de date)
+    - sa existe o modalitate de afisare a activitatilor, in functie de preferintele clientilor
+    Aceste 3 feature-uri sunt obligatorii, orice alt feature pe care doriti sa-l implementati ramane la alegerea voastra (chiar este indicat sa personalizati aplicatia si mai mult).
+    In ceea ce priveste preferintele clientilor, ramane la alegerea voastra ce doriti sa implementati si ce algoritmi de afisare aplicati. Puteti, de exemplu, sa considerati sa afisati in functie de data postarii, numarul de comentarii si numarul de +1 primite, fiecare din aceste informatii avand o anumita pondere (pondere care poate sa fie setata de catre client) si sa afisati in ordinea descrescatoare a sumei pentru fiecare activitate.
+    Trebuie sa aratati ca toate feature-urile obligatorii functioneaza si trebuie sa prezentati si modul de afisare si selectie al activitatilor. Desigur, daca aveti si alte feature-uri implementate, si acestea trebuie prezentate.
+

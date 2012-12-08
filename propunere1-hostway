@@ -1,0 +1,28 @@
+ O problema importanta in retelistica este asignarea de adrese de retea in functie de cerintele utilizatorilor, fara a face o risipa prea mare de adrese. Astfel, trebuie ca numarul de adrese care raman utilizabile sa fie cat mai mare, dar si tipul lor este important: daca un client doreste un spatiu /27 si ramase sunt doar multe spatii /30, cerintele clientului nu sunt satisfacute, chiar daca criteriu de numar maxim de spatii este satisfacut.
+
+    CERINTA
+    Sunteti departamentul de retelistica din cadrul unui Internet Service Provider care tocmai a venit in Bucuresti. Pentru a face managementul spatiilor de adrese si pentru a vizualiza cererile de adaugare si de stergere si adresele deja date intr-un mod realistic, s-a decis sa se foloseasca Google Maps si Google Places(se pot vizualiza, astfel, foarte usor unde este data o anumita retea sau unde exista o cerere de asignare a unei adrese de retea, putand sa se asigneze o adresa si sa se trimita o echipa sa monteze echipamentul imediat).
+
+    Cum spatiu de adresare asignat firmei este limitat (aveti doar un spatiu /20 - vom considera pentru testare ca acest spatiu este 255.240.0.0/20), dorinta este sa se asigneze fiecarei zone un spatiu de adrese (subnet) in mod optim, pentru ca viitoarele posibile cerinte sa poata sa fie si ele indeplinite. Clientii dintr-o zona vor dori sa fie in aceeasi retea (pentru a putea sa faca schimb de fisiere intre ei mai usor si cu viteze mai mari), insa niciodata numarul de clienti dintr-o zona nu va depasi 254 ( se va incadra zona intr-un spatiu de adresare /24). Numarul minim este de 2 clienti (adica un spatiu de /30).
+
+    Ceea ce se doreste de la voi este sa creeati un script care lucreaza cu Google API si care, primind locatii cu cereri de adrese sau cu cereri de stergere, sa dea acelei locatii un spatiu de adrese corespunzator, avand in vedere si posibilitatea urmatoarelor cerinte (se doreste ca numarul de adrese ramase libere sa fie maxim si ca spatiile sa fie cat mai mari) sau sa stearga adresa asignata acelei locatii (stergand si locatia). Desigur, indeplinirea ultimelor restrictii nu se poate realiza simultan, asa ca se doreste ca, in cazul unui comportament mediu (toata plaja), dar si in cazul unui teste care testeaza limitele (de exemplu, se iau mai multe spatii mici, apoi se cer adrese mari). Pe langa aceasta asignare, se doreste sa se creeze si o pagina in care sa se afiseze harta cu locatiile create, pentru o vizualizare in timp real a muncii realizate si o statistica a spatiului de adrese (cate adrese din fiecare spatiu de adresare sunt available pentru cereri viitoare).
+
+    Pot aparea 2 tipuri de evenimente:
+    - cerere de spatiu - in cazul acesteia, trebuie sa i se aloce o adresa din spatiul cerut (se va stege locatia cerere si se adauga o noua locatie, in care este specificat spatiu de adrese)
+    - sa se stearga un spatiu folosit - in acest caz, spatiul devine reutilizabil in viitor (si locatia cu spatiul de adrese este sters, precum si locatia cu cererea de stergere).
+
+    ATENTIE! Adresele care se dau trebuie sa fie din cele neutilizate. NU SE VOR SCHIMBA ADRESELE DEJA DATE! (din motive de logging, trebuie sa se mentina adresele asa cum au fost asignate).
+
+    Exemple de cod pentru adaugare/stergere locatii si raspunsurile venite din partea serverului: 
+    https://developers.google.com/places/documentation/actions#PlaceReports
+
+    Exemple de cod pentru cautare locatii:
+    https://developers.google.com/places/documentation/search#PlaceSearchRequests
+
+    Locatiile de cerere vor avea un nume anume: "HACK REQ /spatiu" - pentru a putea cauta exact, la fel, locatiile de sters vor avea un nume: "HACK DELETE", iar locatiile cu adresa vor avea nume "HACK ADDRESS adresa/spatiu".
+
+    Pentru afisarea de harti, trebuie sa combinati cautarea de locatii cu API-ul de Maps. Link catre API este: https://developers.google.com/maps/documentation/javascript/tutorial. Pe aceeasi pagina trebuie sa se gaseasca si harta si statisticile privind numarul de adrese ramase (fiecare spatiu de adresare pe cate un rand, /spatiu: numar adrese available).
+
+    Scriptul vostru se va evalua pe baza unor teste.
+    Intotdeauna se va pleca de la o harta goala (vom rula un script care sterge toate locatiile de toate felurile adaugate), in care nu se afla nici un fel de locatie. Scriptul de test va adauga cereri de locatii, urmand sa rulam scriptul vostru, pentru a le prelucra. Dupa acest pas ne vom uita la afisare si vom vedea statisticile. Vom rula, apoi, scripturi in care adaugam/stergem locatii, dupa fiecare script verificand statisticile privind numarul de adrese.
+

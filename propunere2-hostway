@@ -1,0 +1,22 @@
+Sunteti responsabili de implementarea noului sistem informatic de repartizare a locurilor pentru constructia caselor in Bucuresti. 
+    Maine ajunge primul transport cu primele 100 de familii si tocmai ati aflat ca sunt anumite cerinte legate de repartizarea locurilor de casa. 
+
+    Fiecare familie care ajunge in Bucuresti primeste un ID unic de forma "N128976324"
+
+    Se considera ca o familie ocupa o raza de aproximativ 500m.
+
+    Fiecare familie se inregistreaza intr-o interfata in care completeaza urmatoarele date:
+    - Numarul de persoane
+    - Poate sa introduca un numar nelimitat de reguli de forma
+        A: Vreau sa fim vecini cu N12544
+        B: Nu vreau sa fim vecini cu N423
+      sau o singura data regula:
+        C: Putem sa fim vecini cu oricine
+      
+    Ce inseamna ca Familia N1 este vecina cu Familia N2? Inseamna ca distanta dintre spatiul ocupat de N1 si spatiul ocupat de N2 trebuie sa fie sub 500m, fara ca spatiul ocupat de cele 2 familii sa se intrepatrunda. 
+
+    Ce inseamna ca Familia N3 nu vrea sa fie vecina cu familia N4? Inseamna ca distanta dintre spatiul ocupat de N3 si spatiul ocupat de N4 este mai mare de 1Km sau intre N3 si N4 (in linie dreapta) exista o alta familie.
+
+    Daca nu exista solutie, atunci aplicatia afiseaza cea mai buna solutie incompleta gasita si indruma utilizatorul sa incerce sa schimbe regulile.
+
+    Echipele trebuie sa isi genereze propriile date de test. 
